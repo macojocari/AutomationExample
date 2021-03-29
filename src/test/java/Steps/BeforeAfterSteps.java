@@ -5,13 +5,12 @@ import cucumber.api.java.Before;
 
 public class BeforeAfterSteps {
     @Before
-    public void before(){
+    public void before() {
         Driver.startDriver();
     }
 
-
     @After
-    public void after(){
+    public void after() {
         Driver.getDriver().quit();
     }
 }

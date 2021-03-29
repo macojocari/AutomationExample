@@ -9,11 +9,13 @@ import org.openqa.selenium.support.PageFactory;
 import static com.thoughtworks.selenium.SeleneseTestNgHelper.assertEquals;
 
 public class webDriverUniversityPage {
-    public static final String  URL = "http://webdriveruniversity.com/";
-    public static void initialiseSite(){
+    public static final String URL = "http://webdriveruniversity.com/";
+
+    public static void initialiseSite() {
         Driver.getDriver().get(URL);
-        PageFactory.initElements(Driver.getDriver(),webDriverUniversityPage.class);
+        PageFactory.initElements(Driver.getDriver(), webDriverUniversityPage.class);
     }
+
     @FindBy(xpath = "//h1[text()='BUTTON CLICKS']")
     private static WebElement buttonClicks;
 
@@ -45,46 +47,51 @@ public class webDriverUniversityPage {
     private static WebElement buttonClose3;
 
 
-    public static void clickButtonClicks(){
+    public static void clickButtonClicks() {
         buttonClicks.click();
     }
-    public static void ClickMe1(){
+
+    public static void ClickMe1() {
         clickMe1.click();
     }
-    public static void ClickMe2(){
+
+    public static void ClickMe2() {
         clickMe2.click();
     }
-    public static void ClickMe3(){
+
+    public static void ClickMe3() {
         clickMe3.click();
     }
 
-    public static void clickButtonClose(){
+    public static void clickButtonClose() {
         buttonClose.click();
     }
-    public static void clickButtonClose2(){
+
+    public static void clickButtonClose2() {
         buttonClose2.click();
     }
 
-    public static void clickButtonClose3(){
+    public static void clickButtonClose3() {
         buttonClose3.click();
     }
 
-    public static void checkFirstMessage(){
+    public static void checkFirstMessage() {
         String actualResult = firstMessage.getText().trim();
         String expectedResult = "Congratulations!";
-        assertEquals(actualResult,expectedResult);
+        assertEquals(actualResult, expectedResult);
 
     }
-    public static void checkSecondMessage(){
+
+    public static void checkSecondMessage() {
         String actualResult = secondMessage.getText().trim();
         String expectedResult = "It’s that Easy!! Well I think it is.....";
-        assertEquals(actualResult,expectedResult);
-
+        assertEquals(actualResult, expectedResult);
     }
-    public static void checkThirdMessage(){
+
+    public static void checkThirdMessage() {
         String actualResult = thirdMessage.getText().trim();
         String expectedResult = "Well done! the Action Move & Click can become very useful!";
-        assertEquals(actualResult,expectedResult);
+        assertEquals(actualResult, expectedResult);
 
     }
 }

@@ -1,11 +1,6 @@
 Feature:Button Clicks
 
 
-
-
-
-
-
   Scenario: Check the messages in the Button Clicks tab
     Given I am on the webdriveruniversity site
     When I click on the BUTTON CLICKS

@@ -19,6 +19,7 @@ public class ThenSteps {
         Thread.sleep(1000);
         webDriverUniversityPage.clickButtonClose2();
     }
+
     @Then("I check the third message")
     public void thenICheckTheThirdMessage() throws InterruptedException {
         Thread.sleep(2000);
